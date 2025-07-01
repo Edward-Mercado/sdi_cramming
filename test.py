@@ -1,7 +1,5 @@
 import json
-with(open('stuff.json', 'r')) as stuff_json:
-    file = json.load(stuff_json)
-    
+
 file = [
     {
        'name' : "Edward",
@@ -24,4 +22,4 @@ file = [
 ]
 
 with(open('stuff.json', 'w')) as stuff_json:
-    json.dump(file, stuff_json)
+    json.dump(file, stuff_json, indent = 4)
