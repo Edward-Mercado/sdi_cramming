@@ -1,25 +1,18 @@
-import json
+import random, time
 
-file = [
-    {
-       'name' : "Edward",
-       'age' : 14,
-       'birthday' : {
-           "month" : 7,
-           "day" : 27,
-           "year" : 2010
-       } 
-    },
-    {
-       'name' : "Katherine",
-       'age' : 19,
-       'birthday' : {
-           "month" : 6,
-           "day" : 11,
-           "year" : 2006
-       } 
-    },
-]
-
-with(open('stuff.json', 'w')) as stuff_json:
-    json.dump(file, stuff_json, indent = 4)
+target = random.randint(1, 10)
+found = False
+while found == False:
+    try:
+        number = int(input("guess a number mothafucka: "))
+    except ValueError:
+        print('wtf man')
+        number = -10000
+        
+    if number == target:
+        found = True
+    else:
+        print("ya wrong lmfao")
+        time.sleep(3)
+        
+print('damn, ya got me')
