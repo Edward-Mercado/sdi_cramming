@@ -1,5 +1,10 @@
-fetch('stuff.json')
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-})
+let done = false;
+let x = 1;
+
+while(done == false) { // brotato shake what
+    console.log("Hello World");
+    x += 1;
+    if(x > 10) {
+        done = true;
+    }
+}
